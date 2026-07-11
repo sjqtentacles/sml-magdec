@@ -30,6 +30,41 @@ val totalIntensity      : {north:real, east:real, down:real} -> real
 val sampleCoeffs : coeff list
 ```
 
+## Example
+
+`make example` builds and runs [`examples/demo.sml`](examples/demo.sml), which
+evaluates the axial-dipole `sampleCoeffs` field at a few geographic points and
+prints the resulting field vector plus declination, inclination, and
+intensity (output is byte-identical under MLton and Poly/ML):
+
+```
+sml-magdec demo
+===============
+
+sampleCoeffs: 1 coefficient(s) (axial dipole g10)
+
+Equator (lat=0.0, lon=0.0, alt=0.0km):
+  field       = {north=29404.50, east=0.00, down=0.00} nT
+  declination = 0.00 deg
+  inclination = 0.00 deg
+  horizontalIntensity = 29404.50 nT
+  totalIntensity      = 29404.50 nT
+
+Mid-latitude (lat=45.0, lon=90.0, alt=100.0km):
+  field       = {north=19843.03, east=0.00, down=39686.07} nT
+  declination = 0.00 deg
+  inclination = 63.43 deg
+  horizontalIntensity = 19843.03 nT
+  totalIntensity      = 44370.37 nT
+
+Near pole (lat=89.0, lon=0.0, alt=0.0km):
+  field       = {north=513.18, east=0.00, down=58800.04} nT
+  declination = 0.00 deg
+  inclination = 89.50 deg
+  horizontalIntensity = 513.18 nT
+  totalIntensity      = 58802.28 nT
+```
+
 ## Physics
 
 The magnetic scalar potential follows the IGRF convention:
