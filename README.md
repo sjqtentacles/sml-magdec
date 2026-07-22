@@ -1,5 +1,7 @@
 # sml-magdec
 
+[![CI](https://github.com/sjqtentacles/sml-magdec/actions/workflows/ci.yml/badge.svg)](https://github.com/sjqtentacles/sml-magdec/actions/workflows/ci.yml)
+
 Zero-dependency Standard ML library for spherical-harmonic geomagnetic field
 computation (IGRF-style).
 
